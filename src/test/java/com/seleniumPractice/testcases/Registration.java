@@ -16,9 +16,9 @@ public class Registration extends BaseClass{
 		
 		LoginPage loginPage=new LoginPage(driver);
 		
-		loginPage.loginOption();
-		
-		loginPage.clickOnSignInLink();
+//		loginPage.loginOption();
+//
+//		loginPage.clickOnSignInLink();
 		
 		RegistrationPage register=new RegistrationPage(driver);
 		

@@ -9,16 +9,17 @@ import com.seleniumPractice.pages.LoginPage;
 
 public class LoginTest extends BaseClass
 {
+	HomePage homePage;
 	@Test(dataProvider = "TestData",dataProviderClass = DataProviders.class)
 	public void validLogin(String uname,String pass)
 	{
 		LoginPage login=new LoginPage(driver);
 		
-		login.loginOption();
+		//login.loginOption();
 	
-		HomePage homePage=login.loginToApplication(uname,pass);
+		homePage=login.loginToApplication(uname,pass);
 		
-		Assert.assertTrue(homePage.isManageDisplayed());
+		Assert.assertTrue(homePage.isDashboardDisplayed());
 		
 		homePage.signOutFromApplication();
 	

@@ -27,7 +27,7 @@ public class ExtentManager
     public static ExtentReports createInstance() 
     {
         ExtentSparkReporter htmlReporter = new ExtentSparkReporter("./Reports/Automation_"+Utility.getCurrentDate()+".html");
-        htmlReporter.config().setTheme(Theme.DARK);
+        htmlReporter.config().setTheme(Theme.STANDARD);
         htmlReporter.config().setDocumentTitle("Automation Report");
         htmlReporter.config().setEncoding("utf-8");
         htmlReporter.config().setReportName("Sprint 1 Report");
