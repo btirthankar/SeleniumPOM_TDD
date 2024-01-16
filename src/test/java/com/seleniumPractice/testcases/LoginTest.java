@@ -14,9 +14,7 @@ public class LoginTest extends BaseClass
 	public void validLogin(String uname,String pass)
 	{
 		LoginPage login=new LoginPage(driver);
-		
-		//login.loginOption();
-	
+
 		homePage=login.loginToApplication(uname,pass);
 		
 		Assert.assertTrue(homePage.isDashboardDisplayed());
