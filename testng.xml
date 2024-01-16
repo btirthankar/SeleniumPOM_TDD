@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <listeners>
+
+        <listener class-name="com.seleniumPractice.listeners.ExtentReportListener"></listener>
+
+    </listeners>
+
+
+    <test verbose="2" preserve-order="true" name="C:/Users/tirth/IdeaProjects/SeleniumPOM_TDD/src/test/java/com/seleniumPractice/testcases/LoginTest.java">
+        <classes>
+            <class name="com.seleniumPractice.testcases.LoginTest">
+                <methods><include name="validLogin"/></methods>
+            </class>
+        </classes>
+    </test>
+</suite>
