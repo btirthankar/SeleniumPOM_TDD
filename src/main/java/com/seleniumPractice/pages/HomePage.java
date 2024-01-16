@@ -25,7 +25,7 @@ public class HomePage
 		return status;
 	}
 
-	public void signOutFromApplication()
+	public void logOutFromApplication()
 	{
 		Utility.waitForWebElement(driver, userProfileMenu).click();
 		Utility.waitForWebElement(driver, logout).click();
