@@ -3,17 +3,12 @@
 <suite name="All Test Suite">
 
     <listeners>
-
         <listener class-name="com.seleniumPractice.listeners.ExtentReportListener"></listener>
-
     </listeners>
-
-
-    <test verbose="2" preserve-order="true" name="C:/Users/tirth/IdeaProjects/SeleniumPOM_TDD/src/test/java/com/seleniumPractice/testcases/LoginTest.java">
+    <test thread-count="2" name="Test">
         <classes>
-            <class name="com.seleniumPractice.testcases.LoginTest">
-                <methods><include name="validLogin"/></methods>
-            </class>
+            <class name="com.seleniumPractice.testcases.LoginTest"></class>
+            <class name="com.seleniumPractice.testcases.AdminPageTest"></class>
         </classes>
     </test>
 </suite>

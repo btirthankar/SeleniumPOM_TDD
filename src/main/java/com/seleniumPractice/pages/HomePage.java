@@ -9,8 +9,10 @@ public class HomePage
 {
 	WebDriver driver;
 	AdminPage adminPage;
-	
-	
+	LoginPage loginPage;
+
+
+
 	public HomePage(WebDriver driver)
 	{
 		this.driver=driver;
@@ -21,7 +23,6 @@ public class HomePage
 	private By logout = By.xpath("//a[text()='Logout']");
 
 	private By adminButton = By.xpath("//span[text()='Admin']");
-
 
 	public boolean isDashboardDisplayed()
 	{
@@ -35,13 +36,11 @@ public class HomePage
 		return adminPage;
 	}
 
-	public void logOutFromApplication()
+	public LoginPage logOutFromApplication()
 	{
 		Utility.waitForWebElement(driver, userProfileMenu).click();
 		Utility.waitForWebElement(driver, logout).click();
-
+		loginPage=new LoginPage(driver);
+	return loginPage;
 	}
-	
-	
-
 }
