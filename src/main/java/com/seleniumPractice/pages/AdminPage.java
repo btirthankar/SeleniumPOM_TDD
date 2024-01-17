@@ -36,13 +36,10 @@ public class AdminPage
 		if(userRole.equalsIgnoreCase("Admin")){
 			Utility.waitForWebElement(driver, userRoleEmployeeAdminDropdown).click();
 			Assert.assertTrue(Utility.waitForWebElement(driver, userRoleEmployeeAdminDropdown).isDisplayed());
-			System.out.println("*******************Admin**************************");
 			Thread.sleep(3000);
-
 		}
 		else
 			Utility.waitForWebElement(driver, userRoleEmployeeESSDropdown);
-		System.out.println("*******************Not getting link**************************");
 
 	}
 }
