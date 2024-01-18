@@ -15,7 +15,7 @@ public class DataProviders
 	@DataProvider(name = "AdminSearchTestData")
 	public static Object [][] getAdminSearchData()
 	{
-		Object[][]arr=ExcelReader.getDataFromExcel("AdminSearchData");
+		Object[][]arr=ExcelReader.getDataFromExcel("AdminSearchTestData");
 		return arr;
 	}
 }

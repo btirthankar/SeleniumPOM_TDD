@@ -52,7 +52,7 @@ public class AdminPage
 
 		if(findTableBoolean){
 			for (int i = 0;i<listofUsers.size();i++){
-				if(listofUsers.get(i).getText().equals("userName") && listofUserRoles.get(i).getText().equals("userRole"))
+				if(listofUsers.get(i).getText().equals(userName) && listofUserRoles.get(i).getText().equals(userRole))
 					return true;
 			}
 		}

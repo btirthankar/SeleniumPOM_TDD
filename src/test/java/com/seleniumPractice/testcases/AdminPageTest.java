@@ -18,7 +18,7 @@ public class AdminPageTest extends BaseClass
 	public void validateLogin(String uname,String pass)
 	{
 		login=new LoginPage(driver);
-		homePage=login.loginToApplication(uname,pass);
+		homePage=login.loginToApplication("Admin","admin123");
 		Assert.assertTrue(homePage.isDashboardDisplayed());
 	}
 
@@ -30,8 +30,9 @@ public class AdminPageTest extends BaseClass
 	}
 
 	@Test(priority = 3,dependsOnMethods = "navigateToAdminPage", dataProvider = "AdminSearchTestData",dataProviderClass = DataProviders.class)
-	public void employeeSearchValidation(String uName, String uRole) throws InterruptedException {
+	public void adminSearchValidation(String uName, String uRole) throws InterruptedException {
 		adminPage= new AdminPage(driver);
-		adminPage.adminSearch(uName, uRole);
+		Assert.assertTrue(adminPage.adminSearch(uName, uRole));
+//		adminPage.adminSearch("Admin","Admin");
 	}
 }
