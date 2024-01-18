@@ -29,7 +29,7 @@ public class AdminPageTest extends BaseClass
 		Assert.assertTrue(adminPage.isUserManagementDisplayed());
 	}
 
-	@Test(dataProvider = "AdminSearchTestData",dataProviderClass = DataProviders.class)
+	@Test(priority = 3,dependsOnMethods = "navigateToAdminPage", dataProvider = "AdminSearchTestData",dataProviderClass = DataProviders.class)
 	public void employeeSearchValidation(String uName, String uRole) throws InterruptedException {
 		adminPage= new AdminPage(driver);
 		adminPage.adminSearch(uName, uRole);
