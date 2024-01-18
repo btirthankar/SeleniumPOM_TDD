@@ -1,2 +1,2 @@
-# Automating OrangeHRM using POM
+# Automating OrangeHRM UI using POM
 
